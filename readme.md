@@ -1,4 +1,7 @@
-working with react
+This is pure blazor wasm project and works with React
+
+below lists all steps to construct react (es6, jsx and hook enable, react version is 17)
+
 - npm init
 - npm install --save-dev react
 - npm install --save-dev yarn 
@@ -16,4 +19,4 @@ working with react
 - npm install --save-dev @babel/plugin-transform-runtime
 - npm install --save-dev terser-webpack-plugin
 
-- add webpack.config.js
+- add webpack.config.js (please refer to the file)
