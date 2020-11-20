@@ -1,0 +1,26 @@
+@page "/react/Counter"
+@using Microsoft.AspNetCore.Components.Rendering;
+@inject IJSRuntime jsRuntime
+
+<button @onclick="CreateReactComponent">React Component</button>
+<button @onclick="CreateReactComponentJSX">React Component JSX</button>
+
+<div id="@reactId"></div>
+<div id="@reactIdJSX"></div>
+
+@code{    
+
+    private string reactId = "rectComponent";
+
+    private string reactIdJSX = "reactIdJSX";
+
+    private async void CreateReactComponent()
+    {
+        await jsRuntime.InvokeVoidAsync("createReactComponent", this.reactId);
+    }
+
+    private async void CreateReactComponentJSX()
+    {
+        await jsRuntime.InvokeVoidAsync("InfoLinkComponents.ReactMain", this.reactIdJSX);
+    }
+}
